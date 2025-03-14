@@ -91,7 +91,7 @@ plt.show()
 ```
 
 📌 Figure 1: Meteorite Discoveries Over Time
-
+![image](https://github.com/user-attachments/assets/0e8a8ad6-0a20-4c8e-ae19-d2d726472a61)
 
 
 2️⃣ Distribution of Meteorite Mass
@@ -111,7 +111,7 @@ plt.show()
 ```
 
 📌 Figure 2: Meteorite Mass Distribution
-
+![image](https://github.com/user-attachments/assets/64bc7312-bd6c-4030-9ecc-7412c11b1525)
 
 
 Geospatial Analysis: Meteorite Impact Locations
@@ -146,6 +146,7 @@ display(m)
 
 📌 Figure 3: Meteorite Impact Locations
 
+![Screenshot 2025-03-14 at 11 56 27 AM](https://github.com/user-attachments/assets/ebe9f44b-66df-48a2-8d87-853b3e89821b)
 
 
 Key Insights
