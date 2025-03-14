@@ -82,16 +82,31 @@ We visualize how meteorite discoveries have changed over time:
 ```python
 import matplotlib.pyplot as plt
 
-# Plot discoveries over time
-df['year'].value_counts().sort_index().plot(kind='line', figsize=(10,5))
-plt.xlabel("Year")
+# Filter dataset for years after 1800 and before 2020
+df_filtered = df[(df['year'] >= 1800) & (df['year'] <= 2000)]
+
+# Ensure correct decade grouping (incrementing by 10 years properly)
+df_filtered['decade'] = (df_filtered['year'] // 10) * 10
+
+# Group by decade
+discoveries_per_decade = df_filtered['decade'].value_counts().sort_index()
+
+# Plot the smoothed trend
+plt.figure(figsize=(10, 5))
+plt.plot(discoveries_per_decade.index, discoveries_per_decade.values, marker='o', linestyle='-')
+
+# Labels & Title
+plt.xlabel("Decade")
 plt.ylabel("Number of Meteorites")
-plt.title("Meteorite Discoveries Over Time")
+plt.title("Meteorite Discoveries Over Time (Grouped by Decade)")
+
+# Show the plot
+plt.grid(True)
 plt.show()
 ```
 
 📌 Figure 1: Meteorite Discoveries Over Time
-![image](https://github.com/user-attachments/assets/0e8a8ad6-0a20-4c8e-ae19-d2d726472a61)
+![image](https://github.com/user-attachments/assets/296b7579-612b-40f5-9736-f3613b3e160e)
 
 
 2️⃣ Distribution of Meteorite Mass
